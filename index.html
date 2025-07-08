@@ -1,43 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <title>Frontend Mentor | Blog preview card</title>
-  <link rel="icon" href = "./assets/images/favicon.svg" type = "image/svg+xml">
- 
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Blog preview card</title>
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
+
+    <style>
       body {
-      margin: 0;
-      background-color: #F0F4F4;
-    }
+        margin: 0;
+        background-color: #f0f4f4;
+        position: relative;
+      }
       .rectangle img {
-      width: 1573px;
-      height: 1260px;
-      margin-left: -463px;
-      margin-top: 126px;
-    }
-    .logo {
-      position: absolute;
-      left: 164px;
-      top: 54px;
-    }
-    .logo img{
-      width: 144px;
-      height: 144px;
-    }
-
-  </style>
-</head>
-<body>
-
-<div class = "rectangle">
-  <img src="assets/images/Rectangle 28.svg" alt="Рамка">
-</div>
-   <div class = "logo">
-    <img src="assets/images/favicon.svg" alt="Лого" title = "Фавикон 144">
-  </div>
-
-</body>
+        width: 1573px;
+        height: 1260px;
+        margin-left: -463px;
+        margin-top: 126px;
+      }
+      .logo {
+        position: absolute;
+        left: 164px;
+        top: 54px;
+        width: 144px;
+        height: 144px;
+        filter: drop-shadow(0 4px 39px rgba(0,0,0,0.15));
+      }
+      .logo img {
+        position: absolute;
+        margin-top: 0;
+        margin-left: 0;
+      }
+      .container_designs {
+        position: absolute;
+        left: 1213px;
+        top: 275px;
+        width: 623px;
+        height: 530px;
+        border: 2px dashed green;
+      }
+      .container_preview {
+        position: absolute;
+        left: 164px;
+        top: 289px;
+        width: 780px;
+        height: 226px;
+        border: 2px dashed red;
+      }
+      .container_preview_head {
+        position: absolute;
+        color: #3e54a3;
+        font-family: Barlow, sans-serif;
+        font-size: 72px;
+        font-weight: 500;
+        line-height: 100%;
+        left: 0px;
+        top: 0px;
+        width: 780px;
+        height: 72px;
+      }
+      .container_preview_text {
+        position: absolute;
+        color: #1c2022;
+        font-family: Heebo, sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 160%;
+        left: 0px;
+        bottom: 0px;
+        width: 780px;
+        height: 114px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rectangle">
+      <img src="assets/images/Rectangle 28.svg" alt="Рамка" />
+    </div>
+    <div class="logo">
+      <img src="./assets/images/favicon.svg" alt="Лого">
+    </div>
+    <div class="container_designs"></div>
+    <div class="container_preview">
+      <div class="container_preview_head">Blog preview card</div>
+      <div class="container_preview_text">
+        This is a Figma design file for a Frontend Mentor challenge. Figma is a
+        design tool professional teams use to collaborate on projects. Need help
+        using Figma?
+        <a
+          href="https://www.frontendmentor.io/articles/figma-for-developers-how-to-work-with-a-design-file-m6CZKZ1rC1"
+          style="font-weight: bold"
+          >Read our Figma for developers article</a
+        >
+      </div>
+    </div>
+  </body>
 </html>
