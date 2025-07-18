@@ -34,6 +34,13 @@
         font-weight: 800;
         font-style: normal;
       }
+      @font-face {
+        font-family: "Figtree_N";
+        src: url("./assets/fonts/Figtree-VariableFont_wght.ttf")
+          format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
       body {
         margin: 0;
         background-color: #f0f4f4;
@@ -41,10 +48,12 @@
       }
       .rectangle {
         position: relative;
-        width: 1573px;
+        width: 1100px;
         height: 1260px;
         left: 0px;
         top: 126px;
+        background: #ffffff;
+        border-top-right-radius: 75px;
       }
       .logo {
         position: absolute;
@@ -60,7 +69,19 @@
         top: 275px;
         width: 623px;
         height: 530px;
-        border: 2px dashed green;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .container_designs::after {
+        content: "";
+        position: absolute;
+        width: 623px;
+        height: 2px;
+        background: #979797;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
       }
       .container_preview {
         position: absolute;
@@ -95,8 +116,8 @@
       }
       .mackbook {
         position: absolute;
-        left: 170px;
-        top: 622px;
+        left: 200px;
+        top: 460px;
         width: 765px;
         height: 500px;
       }
@@ -209,8 +230,8 @@
       }
       .bottom {
         position: absolute;
-        left: 80px;
-        top: 1090px;
+        left: 110px;
+        top: 933px;
         width: 956px;
         height: 28px;
         z-index: 15;
@@ -241,11 +262,62 @@
         background-color: #10202c;
         z-index: 100;
       }
+      .design_frame_1,
+      .design_frame_2 {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        height: 48%;
+        display: flex;
+        flex-direction: column;
+      }
+      .design_frame_1_text,
+      .design_frame_2_text {
+        color: #1c2022;
+        font-family: Heebo, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 160%;
+        word-wrap: break-word;
+        left: 100px;
+        width: 500px;
+        flex: 1;
+        height: 114px;
+      }
+
+      .design_frame_content {
+        display: flex;
+        margin-top: auto;
+        align-items: flex-start;
+        width: 100%;
+        padding-bottom: 30px;
+      }
+      .design_frame_content img {
+        object-fit: contain;
+        margin-right: 55px;
+        width: 56px;
+        height: 56px;
+      }
+      .design_frame_head {
+        font-family: Figtree_N, sans-serif;
+        font-size: 32px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding: 20px 10px;
+        margin-left: 100px;
+      }
+      .design_frame_head img {
+        object-fit: contain;
+        margin-left: 25px;
+        width: 32px;
+        height: 32px;
+      }
     </style>
   </head>
   <body>
     <div class="rectangle">
-      <img src="assets/images/Rectangle 28.svg" alt="Рамка" />
       <div class="mackbook">
         <img src="./assets/images/Dark Screen.svg" alt="Корпус макбука" />
         <div class="screen">
@@ -278,7 +350,6 @@
         <img src="./assets/images/Bottom.png" alt="Клава макбука" />
       </div>
     </div>
-    <div class="container_designs"></div>
     <div class="container_preview">
       <div class="container_preview_head">Blog preview card</div>
       <div class="container_preview_text">
@@ -294,6 +365,48 @@
     </div>
     <div class="logo">
       <img src="./assets/images/favicon.svg" alt="Лого" />
+    </div>
+    <div class="container_designs">
+      <div class="design_frame_1">
+        <div class="design_frame_head">
+          Design System
+          <img
+            src="./assets/images/mdi_arrow-right.png"
+            alt="->"
+            style="transform: rotate(-90deg)"
+          />
+        </div>
+        <div class="design_frame_content">
+          <img src="./assets/images/majesticons_atom-2.png" alt="Атом" />
+          <div class="design_frame_1_text">
+            The design system contains all the information for reusable
+            components and styles. It shows colors, typography styles, and
+            components, including various component states if they're
+            interactive.
+          </div>
+        </div>
+      </div>
+      <div class="design_frame_2">
+        <div class="design_frame_head">
+          Designs
+          <img
+            src="./assets/images/mdi_arrow-right.png"
+            alt="->"
+            style="transform: rotate(-90deg)"
+          />
+        </div>
+        <div class="design_frame_content">
+          <img src="./assets/images/mingcute_layout-8-fill.png" alt="Кирпичи" />
+          <div class="design_frame_2_text">
+            The high-fidelity designs help you build responsive, accessible
+            projects. Aim for precision rather than pixel-perfect replicas. For
+            guidance, see Josh Comeau's "<a
+              href="https://www.joshwcomeau.com/css/pixel-perfection/"
+              >Chasing the Pixel-Perfect Dream.</a
+            >"
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
